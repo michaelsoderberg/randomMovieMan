@@ -1,6 +1,37 @@
 $(document).ready(function () {
 
-    sendRequest();
+    get250TopTitles();
+
+    function get250TopTitles() {
+        //var parms = "title=" + $("#textBox").val() + "&format=JSONP";
+        var parms = "?title=air%bud&format=JSONP";
+
+        $("#title").text("");
+        $("#genres").text("");
+        $("#actors").text("");
+        $("#rating").text("");
+        $("#url").text("");
+
+        $.ajax({
+            data: parms,
+            url: 'http://www.myapifilms.com/imdb/top',
+            type: 'GET',
+            data: {
+                start: 1,
+                end: 250,
+                filter: "M",
+                format: "JSONP"
+            },
+            dataType: 'jsonp',
+            success: function (response, textStatus, jqXHR) {
+                console.log('Random movie');
+                printMovie(response[10]);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $("#error").text(textStatus + "; " + errorThrown);
+            }
+        });
+    }
 
     function sendRequest() {
         //var parms = "title=" + $("#textBox").val() + "&format=JSONP";
@@ -32,6 +63,7 @@ $(document).ready(function () {
             }
         });
     }
+
 
     function printMovie(movie) {
         console.log(movie);
