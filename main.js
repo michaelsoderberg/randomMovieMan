@@ -3,23 +3,23 @@ $(document).ready(function () {
     get250TopTitles();
 
     function get250TopTitles() {
+      var start = Math.floor(Math.random() * 249) + 1;
         //var parms = "title=" + $("#textBox").val() + "&format=JSONP";
-        var parms = "?title=air%bud&format=JSONP";
+       // var parms = "?title=air%bud&format=JSONP";
 
         $.ajax({
-            data: parms,
             url: 'http://www.myapifilms.com/imdb/top',
             type: 'GET',
             data: {
-                start: 1,
-                end: 250,
+                start: start,
+                end: start+1,
                 filter: "M",
                 format: "JSONP"
             },
             dataType: 'jsonp',
             success: function (response, textStatus, jqXHR) {
                 console.log('Random movie');
-                printMovie(response[10]);
+                printMovie(response[0]);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 $("#error").text(textStatus + "; " + errorThrown);
