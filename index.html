@@ -5,6 +5,7 @@
     <title>Random movie man</title>
     <!-- JavaScript -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="main.js"></script>
 
     <!-- CSS -->
     <link href="css/style.css"/>
@@ -12,7 +13,18 @@
 <body>
 <h2>Jag är en Rubrik</h2>
 <div class="movie-container">
-    Fyll mig med filmdata.
+    
+	Title: <input type="text" id="textBox" value="matrix" />
+	<button class="sendRequest">Send</button>
+	 
+	<br />
+	<div id="error"></div>
+	<br />
+	<b>Countries</b>: 
+	<div id="countries" style="margin-left: 20px;"></div>
+	<br />
+	<b>Actors</b>: 
+	<div id="actors" style="margin-left: 20px;"></div>
 </div>
 </body>
 </html>
