@@ -6,12 +6,6 @@ $(document).ready(function () {
         //var parms = "title=" + $("#textBox").val() + "&format=JSONP";
         var parms = "?title=air%bud&format=JSONP";
 
-        $("#title").text("");
-        $("#genres").text("");
-        $("#actors").text("");
-        $("#rating").text("");
-        $("#url").text("");
-
         $.ajax({
             data: parms,
             url: 'http://www.myapifilms.com/imdb/top',
