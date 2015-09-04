@@ -1,0 +1,12 @@
+{
+  "name": "randomMovieMan",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wooziie/randomMovieMan",
+  "authors": [
+    "Micke <soderberg.micke@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
