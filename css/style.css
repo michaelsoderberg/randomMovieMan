@@ -1,5 +1,5 @@
 body {
-    background-color: #0e1530;
+    background-color: #ececec;
     text-align: center;
 }
 
@@ -9,7 +9,7 @@ body {
     margin: 0 auto;
     border: 1px dashed red;
     display: block;
-
+    padding:20px;
     font-size: 20px;
 }
 
@@ -20,7 +20,20 @@ body {
 p.important {
     color: #ffd985 !important;
 }
-
+ 
 h2, h3, h3, h4, p, span {
-    color: #fff;
+    color: #black;
+}
+.left { 
+    float:left;
+    width:60%;
+    margin-right: 5%;
+}
+.right {
+    float:right;
+    width:25%;
+}
+.clearfix {
+  overflow: auto;
+  zoom: 1;
 }
